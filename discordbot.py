@@ -1,9 +1,12 @@
 import discord
 from discord.ext import commands
 import traceback
+import os
+
+
 
 bot = commands.Bot(command_prefix="/")
-token = "NzIzODc1MjUyMzkxNzcyMjUw.Xu3_XQ.Qpmcj09oIjZ8XYNPjjVhDVrCkco"
+token = os.environ['DISCORD_BOT_TOKEN']
 
 if not discord.opus.is_loaded():
     discord.opus.load_opus("heroku-buildpack-libopus")
